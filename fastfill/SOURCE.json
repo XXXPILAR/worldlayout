@@ -1,0 +1,38 @@
+{
+ "what": "the FastFill files the workflow and FastFill inference need (their import closure), copied unchanged",
+ "from": "fastfill-main/fastfill, identical to github XXXPILAR/fastfill-v4 branch v4-detail-1.7b (51dfc2c, 2026-11-01) for model.py, batch.py, io.py, evaluate.py, schema.py",
+ "copied": "2026-11-07",
+ "sha256": {
+  "fastfill/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "fastfill/anchors.py": "44a3b3275ebca87d5eb126e221fcd005e4c8e1b7cd36061bcd76c73e620a8780",
+  "fastfill/build.py": "fbd36a4f841f4606ab0475e097077c4ea906046caa71aecba0295640c831939f",
+  "fastfill/interface.py": "64f851dfc5836fa11eadd7d2e75cdfd55b33fd1898018a9abb529ca4e8e639e2",
+  "fastfill/scene.py": "91712134b9fce57a0893af25374cc8d62b0855f9374dc8f81800b43ceb00ce60",
+  "fastfill/split.py": "35bbfe4a2ba7b364454093de4a157a2aa2e1600d5316d03c1fa19a1ce4ed3a2f",
+  "fastfill/v2/__init__.py": "fa67d3676eafd0076d102f2b16c4f49f40cedbe56c68fb414bc469b2e79c6050",
+  "fastfill/v2/batch.py": "575a31ac2d82725700f030a0498ea8ab7efc15fc1e5c87cbf53153846171d7fa",
+  "fastfill/v2/boxes.py": "ef0c763fd6584f5b44a2ad8d1976a3f3568b1abf57b8fdcfab562e9c0f384284",
+  "fastfill/v2/cell_costs.py": "11b1b47e8afea53c3e6a6e12a0ed4b1ce8c23b054471c8a835ac66e16d3555a1",
+  "fastfill/v2/evaluate.py": "795a4b60fcca896f61a38f4f6d5cc06bebdb033f8ef37493f29b99b81fdf61de",
+  "fastfill/v2/geometry.py": "156e3ee5fda5f9d6afc95f2cffda75c760884b25617822df794b97bedc0dae5c",
+  "fastfill/v2/io.py": "79dd349e8cf4e1e7e842d998fc7190ab792267a28b2142811208692c4c3533b1",
+  "fastfill/v2/losses.py": "d36d5a55fcc2bf69d06da7e2d40bb057c36f87ea6d65413fd451dd75cda65785",
+  "fastfill/v2/masked_layout.py": "42cec23abe568dcf826b6fe74c902f06375812eb398c10179613185f74fba950",
+  "fastfill/v2/matching.py": "3ae60074cd184cc3adce3526a7c4582687730c13c018f6a270dc51d49b26dceb",
+  "fastfill/v2/model.py": "0d7ff57e98586d2f422c343a1f61e49a1282b41a75ed9da5603b695253849fd2",
+  "fastfill/v2/objective.py": "f13067db9932940272122ea4320a7eeeea44fe42dbd5c30e320f49c725eefc49",
+  "fastfill/v2/ops/layout_quality.py": "c5c96f4e4a022811a39e25376d22deb20bf7344a32f17927f0651205866abf10",
+  "fastfill/v2/ops/v3_metrics.py": "a44460614468934d978d0af810a74a8eaf8f27111fb21351dae1882e409c76a0",
+  "fastfill/v2/regularizers.py": "8314c07895ae1d39f42e9daf2e906fded13025d2dd9e299eb71651cedc14aaa1",
+  "fastfill/v2/runtime.py": "8bd0c2d7e12531fd6805ce0caaa348be94402e950cf91465ffc22f8ddb4f0993",
+  "fastfill/v2/schema.py": "d02610ebc6ca57df03f8426c592b50b7b7d7c634f7c3656c41cbd8bddf09a881",
+  "fastfill/v2/serve.py": "66839f204f4f0a5f12fc794a91e0ea151a9e988f8bf39efa9c046eeccb8bb0b3",
+  "fastfill/v2/support.py": "ccd5e6eada67c724111d619f254d3a78b3e33dbe881bf1fd9c0ca27882ca03c1",
+  "fastfill/v2/text_sft.py": "0dd88d1403a421545942f3aa063a17389dcb914837ee58444ddc58d4bb3a63da",
+  "fastfill/v2/validation.py": "87ed462441f1a74a0da4c6a16cdca45ee5e6dfd7155239f0a348179e26c99f59",
+  "fastfill/validate.py": "ddaff1e5f6dedd949c61267780b92d2a18981926d55939ed038e1e3cdbe17158"
+ },
+ "changed": {
+  "fastfill/v2/ops/layout_quality.py": "2026-11-11, aligned with infinite-task-world's copy (GitHub Slian22/infinite-task-world main 05ef1d65, its SOURCE_MANIFEST integration patch): DOOR_ZONE_DEPTH_M is read from fastfill.v2.cell_costs.DEFAULTS (0.8 m, the same value) instead of fastfill.v2.evaluate, so the checker never imports Torch. Original sha256 188dff03821e39ed7f73390becd0772660ff549ab42429fffe4579a142429be6."
+ }
+}

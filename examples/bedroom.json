@@ -1,0 +1,31 @@
+{
+  "schema_version": "fastfill.v2",
+  "room": {
+    "frame": "right_handed_z_up",
+    "floor_polygon_xy_m": [[0, 0], [5, 0], [5, 4], [0, 4]],
+    "floor_z_m": 0,
+    "height_m": 2.8,
+    "room_type": "bedroom",
+    "openings": [
+      {"type": "door", "wall_index": 0, "position_on_wall": 0.12, "width_m": 0.9, "height_m": 2.1},
+      {"type": "window", "wall_index": 2, "position_on_wall": 0.5, "width_m": 1.3, "height_m": 1.2, "sill_height_m": 0.9}
+    ],
+    "fixed_objects": [
+      {"id": "column", "size_local_m": [0.25, 0.25, 2.8],
+       "bottom_center_m": [4.65, 3.65, 0], "yaw_rad": 0, "category": "column"}
+    ]
+  },
+  "objects": [
+    {"id": "bed", "category": "bed", "description": "a queen bed with upholstered headboard"},
+    {"id": "nightstand", "category": "nightstand", "description": "small nightstand"},
+    {"id": "desk", "category": "desk", "description": "wood writing desk"},
+    {"id": "chair", "category": "chair", "description": "desk chair"},
+    {"id": "lamp", "category": "lamp", "description": "small table lamp", "support_parent": "desk"}
+  ],
+  "constraints": [
+    {"type": "against_wall", "object_id": "bed", "tolerance_m": 0.12},
+    {"type": "near", "object_id": "nightstand", "target_id": "bed", "max_distance_m": 0.55},
+    {"type": "near", "object_id": "chair", "target_id": "desk", "max_distance_m": 0.65},
+    {"type": "faces", "object_id": "chair", "target_id": "desk", "tolerance_rad": 0.6}
+  ]
+}

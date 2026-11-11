@@ -1,0 +1,14 @@
+# keys: never commit
+.env
+*.env
+# environments, caches, outputs
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+runs/
+runs-hf/
+my_out/
+my_sizes/
+.rpm_state*.json
